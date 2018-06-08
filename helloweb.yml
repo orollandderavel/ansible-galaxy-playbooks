@@ -3,8 +3,8 @@
   tasks:
     - name: install helloweb
       docker_container:
-      name: helloweb
-      image: orollandderavel2/helloweb
-      ports:
-        -81:80
+        name: helloweb
+        image: orollandderavel2/helloweb
+        ports:
+          - 81:80
       when: (ansible_distribution == 'Ubuntu' or ansible_os_family == 'RedHat')
